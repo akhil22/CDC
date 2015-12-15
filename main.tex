@@ -175,7 +175,7 @@
 
 \section{Human Intention prediction}
 
-\subsection{}
+\subsection{•}
 
 \begin{frame}{Human Intention prediction}
 %\begin{block}{Block Title}
@@ -200,10 +200,160 @@
 \includegraphics[width= 8.1cm, height=4.5cm]{screen1.eps}
 \end{figure}
 \end{frame}
+\begin{frame}{HMM for Intention prediction}
+\begin{itemize}
+\item{ Let $S^t \in D$ represent the intent of a person to reach destination $S^t$ at time $t$.}
+\item{$D$ represents set of states in HMM.}
+\item{Human trajectories are represented as $X(T) = \{\mathbf{x^1,x^2,...,x^T}\}$}
+\end{itemize}
 
+\end{frame}
+\begin{frame}{HMM for Intention prediction}
+\begin{itemize}
+\item{  $O^t$ is the angle defined by the first derivative of the trajectory at point $\mathbf{x^t}$}
+\item{Given the current position and orientation we compute the probability of reaching each of the destination $d^i \in D$}
+
+\end{itemize}
+\begin{figure}[thpb]
+ \scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.636)(9.053437,3.665)
+\definecolor{color10022}{rgb}{0.9803921568627451,0.10196078431372549,0.1450980392156863}
+\definecolor{color10027}{rgb}{0.12549019607843137,0.19215686274509805,0.8470588235294118}
+\definecolor{color10030}{rgb}{0.09803921568627451,0.9372549019607843,0.26666666666666666}
+\definecolor{color10042}{rgb}{0.043137254901960784,0.9411764705882353,0.9411764705882353}
+\definecolor{color10038}{rgb}{0.07450980392156863,0.1568627450980392,0.9568627450980393}
+\definecolor{color2}{rgb}{0.13333333333333333,0.21176470588235294,0.9411764705882353}
+\definecolor{color3}{rgb}{0.09411764705882353,0.2196078431372549,0.9450980392156862}
+\definecolor{color10046}{rgb}{0.2,0.23921568627450981,0.9529411764705882}
+\definecolor{color5}{rgb}{0.08627450980392157,0.9176470588235294,0.9490196078431372}
+\psbezier[linewidth=0.022,linecolor=color10022](0.28,-3.625)(0.0,-1.925)(2.712876,0.108493745)(3.64,0.555)(4.567124,1.0015062)(4.74,0.915)(5.4,0.875)
+\psdots[dotsize=0.12](2.38,2.635)
+\psdots[dotsize=0.12](5.3,3.375)
+\psline[linewidth=0.04,linecolor=color10027,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(2.38,2.595)(3.18,0.315)(5.26,3.335)
+\psline[linewidth=0.04cm,linecolor=color10030,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.36,-0.845)(5.44,1.755)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.22,0.295)(8.6,0.355)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.9990625,2.62){\color{color2}\psframebox*[framesep=0, boxsep=false,fillcolor=white] {$d_j$}}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.7096877,3.48){\color{color3}$d_i$}
+\psarc[linewidth=0.012,linecolor=color10038,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.84,0.515){0.46}{-35.247574}{113.19859}
+\psarc[linewidth=0.025999999,linecolor=color10030,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(4.5,0.735){0.64}{-45.0}{69.443954}
+\psarc[linewidth=0.022,linecolor=color10046,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.47,0.485){1.31}{61.88679}{124.69515}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.3323438,1.4){$\theta_{i,j}(t)$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.833906,0.62){\color{color10030}$O^t$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.8723438,0.46){$u_i(t)$}
+\psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(0.48,-2.645)(1.78,-2.125)
+\usefont{T1}{ptm}{m}{n}
+\rput(2.6571875,-2.08){trajecjtory}
+\psline[linewidth=0.016cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(5.06,0.675)(6.74,1.235)
+\usefont{T1}{ptm}{m}{n}
+\rput(7.890625,1.36){\color{color10030}current heading}
+\psdots[dotsize=0.12](3.22,0.335)
+\psline[linewidth=0.016cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(3.22,0.335)(3.7,-0.865)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.7279687,-0.88){xt}
+%\rput(7.5671873,3.52){Realtive \\ measure between $d_i$ and $d_j$ \\ with respect to $x^t$}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.2614064,0.08){x-axis}
+%\psline[linewidth=0.016cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(3.54,1.795)(3.74,3.415)
+\end{pspicture} 
+}
+\caption{figure shows the heading angle $O^t$, $\mu_{ij}(t)$ and $\mu_{i}(t)$ at time $t$}
+\label{notation}
+\end{figure}
+\end{frame}
+\begin{frame}{HMM for Intention prediction}
+\begin{itemize}
+\item{  $\mu_i(t)$ is the measure relative to the destination $\mathbf{d^i}$}
+\item{$O^t$ is the global measure of the target orientation}
+\item{$\theta_{ij}(t)$ is the measure between final destinations $\mathbf{d^i}$ and $\mathbf{d^j}$ relative to the current position $\mathbf{x^t}$}
+\end{itemize}
+\begin{figure}[thpb]
+ \scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.636)(9.053437,3.665)
+\definecolor{color10022}{rgb}{0.9803921568627451,0.10196078431372549,0.1450980392156863}
+\definecolor{color10027}{rgb}{0.12549019607843137,0.19215686274509805,0.8470588235294118}
+\definecolor{color10030}{rgb}{0.09803921568627451,0.9372549019607843,0.26666666666666666}
+\definecolor{color10042}{rgb}{0.043137254901960784,0.9411764705882353,0.9411764705882353}
+\definecolor{color10038}{rgb}{0.07450980392156863,0.1568627450980392,0.9568627450980393}
+\definecolor{color2}{rgb}{0.13333333333333333,0.21176470588235294,0.9411764705882353}
+\definecolor{color3}{rgb}{0.09411764705882353,0.2196078431372549,0.9450980392156862}
+\definecolor{color10046}{rgb}{0.2,0.23921568627450981,0.9529411764705882}
+\definecolor{color5}{rgb}{0.08627450980392157,0.9176470588235294,0.9490196078431372}
+\psbezier[linewidth=0.022,linecolor=color10022](0.28,-3.625)(0.0,-1.925)(2.712876,0.108493745)(3.64,0.555)(4.567124,1.0015062)(4.74,0.915)(5.4,0.875)
+\psdots[dotsize=0.12](2.38,2.635)
+\psdots[dotsize=0.12](5.3,3.375)
+\psline[linewidth=0.04,linecolor=color10027,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(2.38,2.595)(3.18,0.315)(5.26,3.335)
+\psline[linewidth=0.04cm,linecolor=color10030,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.36,-0.845)(5.44,1.755)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.22,0.295)(8.6,0.355)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.9990625,2.62){\color{color2}\psframebox*[framesep=0, boxsep=false,fillcolor=white] {$d_j$}}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.7096877,3.48){\color{color3}$d_i$}
+\psarc[linewidth=0.012,linecolor=color10038,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.84,0.515){0.46}{-35.247574}{113.19859}
+\psarc[linewidth=0.025999999,linecolor=color10030,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(4.5,0.735){0.64}{-45.0}{69.443954}
+\psarc[linewidth=0.022,linecolor=color10046,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.47,0.485){1.31}{61.88679}{124.69515}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.3323438,1.4){$\theta_{i,j}(t)$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.833906,0.62){\color{color10030}$O^t$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.8723438,0.46){$u_i(t)$}
+\psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(0.48,-2.645)(1.78,-2.125)
+\usefont{T1}{ptm}{m}{n}
+\rput(2.6571875,-2.08){trajecjtory}
+\psline[linewidth=0.016cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(5.06,0.675)(6.74,1.235)
+\usefont{T1}{ptm}{m}{n}
+\rput(7.890625,1.36){\color{color10030}current heading}
+\psdots[dotsize=0.12](3.22,0.335)
+\psline[linewidth=0.016cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(3.22,0.335)(3.7,-0.865)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.7279687,-0.88){xt}
+%\rput(7.5671873,3.52){Realtive \\ measure between $d_i$ and $d_j$ \\ with respect to $x^t$}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.2614064,0.08){x-axis}
+%\psline[linewidth=0.016cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(3.54,1.795)(3.74,3.415)
+\end{pspicture} 
+}
+\caption{figure shows the heading angle $O^t$, $\mu_{ij}(t)$ and $\mu_{i}(t)$ at time $t$}
+\label{notation}
+\end{figure}
+\end{frame}
 % Placing a * after \section means it will not show in the
 % outline or table of contents.
-\section{collision avoidance}
+\begin{frame}{HMM for Intention prediction}
+\begin{itemize}
+\item{$b_i(O^t)$ is the probability of observing heading $O^t$ given that the person is following the intent $\mathbf{d^i}$ at time $t$.}
+$$
+b_i(O^t) = p(O^t | S^t=\mathbf{d^i}) = \mathcal{N}(O^t | \mu_i(t),\sigma_o) 
+$$ 
+\item{$a_{ij}(t)$ is the probability that the human changes his intent from $\mathbf{d^i}$ to $\mathbf{d^j}$ at any discrete instant $t$ }
+$$
+a_{ij}(t) =p(S^{t+1}=\mathbf{d^j}|S^t = \mathbf{d^i})    = \eta \mathcal{N}(\theta_{ij}(t) | 0, \sigma_a) 
+$$
+\end{itemize}
+\end{frame}
+\begin{frame}{HMM for Intention prediction}
+\begin{itemize}
+\item{Let $O^{1:T}$ = $\{O^1,O^1,...,O^T\}$ is the set of measurements obtained till time $T$.}
+\item{Our task is to calculate $p(S^t = \mathbf{d^i} | O^{1:T} 
+,\lambda)$}
+
+\item{ In HMM this term is usually referred to as $\gamma_t(i)$ To find this we use standard forward and backward algorithms.}
+\end{itemize}
+
+\end{frame}
+
+
+\section{Proactive collision avoidance in intent space}
+\subsection{}
+\begin{frame}{Proactive collision avoidance in intent space}
+\end{frame}
 \section*{Summary}
 
 \begin{frame}{Summary}
