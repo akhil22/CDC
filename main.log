@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2014.5.20)  15 DEC 2015 20:17
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2014.5.20)  15 DEC 2015 22:20
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -1016,27 +1016,52 @@ File: fig2.eps Graphic file (type eps)
 ]
 [16
 
+] [17
+
 ]
-File: fig2.eps Graphic file (type eps)
- <fig2.eps>
-Overfull \vbox (54.29694pt too high) detected at line 421
+File: fig3.eps Graphic file (type eps)
+ <fig3.eps>
+File: fig4.eps Graphic file (type eps)
+ <fig4.eps> [18
+
+] [19
+
+] [20
+
+]
+File: fig8.eps Graphic file (type eps)
+ <fig8.eps> [21
+
+]
+Overfull \hbox (7.50978pt too wide) detected at line 485
+\OT1/cmss/m/it/10.95 E\OT1/cmss/m/n/10.95 [\OT1/cmss/m/it/10.95 f[]\OT1/cmss/m/
+n/10.95 ] = \OML/cmm/m/it/10.95 ^^V[] \OT1/cmss/m/n/10.95 = [][] [][] [][] [][]
+ \OT1/cmss/m/it/10.95 f[]\OT1/cmss/m/n/10.95 (\OML/cmm/m/it/10.95 :\OT1/cmss/m/
+n/10.95 )\OT1/cmss/m/it/10.95 P[]\OT1/cmss/m/n/10.95 (\OML/cmm/m/it/10.95 :\OT1
+/cmss/m/n/10.95 )\OT1/cmss/m/it/10.95 dx[]dy[][]d[][]d[][]
  []
 
-[17
+[22
 
-] [18
+] [23
+
+]
+File: coll_cone_distribution.eps Graphic file (type eps)
+ <coll_cone_distribution.eps> [24
+
+] [25
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 450.
+(hyperref)                removing `\translate ' on input line 540.
 
 File: beamericonarticle.eps Graphic file (type eps)
 <beamericonarticle.eps>
 File: beamericonbook.eps Graphic file (type eps)
  <beamericonbook.eps>
 File: beamericonarticle.eps Graphic file (type eps)
- <beamericonarticle.eps> [19
+ <beamericonarticle.eps> [26
 
 ]
 \tf@nav=\write6
@@ -1059,12 +1084,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16649 strings out of 495062
- 300582 string characters out of 1182644
- 395231 words of memory out of 3000000
- 19371 multiletter control sequences out of 15000+50000
+ 16671 strings out of 495062
+ 300794 string characters out of 1182644
+ 396565 words of memory out of 3000000
+ 19389 multiletter control sequences out of 15000+50000
  17335 words of font info for 59 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  49i,14n,53p,450b,601s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.dvi (19 pages, 201488 bytes).
+Output written on main.dvi (26 pages, 267476 bytes).

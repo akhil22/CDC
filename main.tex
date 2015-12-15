@@ -411,12 +411,125 @@ $$f_i^s \geq 0 $$
 \begin{eqnarray}\label{collcone}
  f_i= (x^{t_c}-x_i^{t_c})^2+(y^{t_c}-y_i^{t_c})^2- R^2\\ \nonumber- \frac{(s\dot{x}^{t_c}-\dot{x}_i^{t_c})(x^{t_c}-x_i^{t_c})+(s\dot{y}^{t_c}-\dot{y}_i^{t_c})(y^{t_c}-y_i^{t_c})^2}{(s\dot{x}^{t_c}-\dot{x}_i^{t_c})^2+(s\dot{y}^{t_c}-\dot{y}_i^{t_c})^2} \\\nonumber, \forall i = {1,2...n}
 \end{eqnarray}
+
+\item{$f_i^s$ denotes the collision cone constraint for the $i^{th}$ obstacle as a function of scale $s$. which depends on the state of the robot and obstacle at time $t=t^c$ which gets reduced to}
 \end{itemize}
+$$a_is^2+b_is+c_i \geq 0 $$
+%You can also highlight sections of your presentation in a block, with it's own title
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
 \begin{figure}
 \centering
-\includegraphics[width= 6.1cm, height=3.5cm]{fig2.eps}
+\includegraphics[width= 4.1cm, height=3.5cm]{fig3.eps}
+\\
+\includegraphics[width= 4.1cm, height=3.5cm]{fig4.eps}
 \end{figure}
 %You can also highlight sections of your presentation in a block, with it's own title
+
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Probabilistic version of time scaled collision cone}
+\begin{itemize}
+
+
+\item{if at time $t=t_c$ the obstacles state are given by }
+$$x_i^{t_c} = \mathcal{N}(\mu_i^{x},\sigma_i^{x}), \dot{x}_i^{t_c} = \mathcal{N}(\mu_i^{\dot{x}},\sigma_i^{\dot{x}})$$
+$$y_i^{t_c} = \mathcal{N}(\mu_i^{y},\sigma_i^{y}), \dot{y}_i^{t_c} = \mathcal{N}(\mu_i^{\dot{y}},\sigma_i^{\dot{y}})$$
+%You can also highlight sections of your presentation in a block, with it's own title
+\item{Then the objective would be to find the scale that maximizes}
+$$P(f_i^s \geq 0)$$ 
+\end{itemize} 
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Objective}
+
+$$\underset{s}{\operatorname{argmax}}\{P(f_i^s \geq 0)\}$$ 
+
+%You can also highlight sections of your presentation in a block, with it's own title
+\end{block}
+\begin{block}{Challenge}
+\begin{itemize}
+
+
+\item{$f_i^s is$ a random variable with unknown analytical  expression for its probability
+ distribution.}
+ \end{itemize} 
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{figure}
+\includegraphics[width= 8.1cm, height=4.5cm]{fig8.eps}
+\end{figure}
+%You can also highlight sections of your presentation in a block, with it's own title
+
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+
+%You can also highlight sections of your presentation in a block, with it's own title
+
+\begin{block}{Solution}
+\begin{itemize}
+
+
+\item{Though the pdf of $f_i^s is$ does not have an analytical expression we can get its mean and standard deviation in closed form as a function of $s$}
+\item{By the law of unconscious statistician}
+$$E[f_i^s]=\mu_{f_i^s}=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+\int_{-\infty}^{\infty}f_i^s(.)P_i(.)dx_i^{t_c}dy_i{t_c}d\dot{x_i}^{t_c}d\dot{y_i}^{t_c}$$
+\item{Which evaluates as}
+$$\mu_{f_i^2} = A_is^2+B_is+C_i$$
+Where $A_i,B_i$ and $C_i$ are the function of robot states and obstacle distribution parameters , $\mu_i^1,\mu_i^2,\sigma_i^1,\sigma_i^2$
+ \end{itemize} 
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+
+%You can also highlight sections of your presentation in a block, with it's own title
+
+\begin{block}{Solution}
+\begin{itemize}
+
+
+\item{Similarly}
+$$ \sigma_{f_i^s} = \sqrt{E[(f_i^s - E[f_i^s])^2} = 
+\sqrt{D_is^4+E_i^3+F_i^2+G_is+H}$$
+Where $D_i,E_i,F_i,G_i$, and $H_i$ are the function of robot states and obstacle distribution parameters , $\mu_i^1,\mu_i^2,\sigma_i^1,\sigma_i^2$
+ \end{itemize} 
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Solution}
+
+$$\underset{s}{\operatorname{argmax}}\{P(f_i^s \geq 0)\} \Longrightarrow \mu_{f_i^s} \pm k * \sigma_{f_i^s} $$ 
+This can be suitably achieved by suitably changing the value of $k$
+%You can also highlight sections of your presentation in a block, with it's own title
+\begin{figure}
+\includegraphics[width= 8.1cm, height=4.5cm]{coll_cone_distribution.eps}
+\end{figure}
+\end{block}
+\end{frame}
+begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Lower bound on $P(f_i^s) \geq 0)$}
+
+\begin{itemize}
+\item{In the previous section we found out on how to obtain scale $s$ for various values of $k$ that would end up maximizing  $P(f_i^s) \geq 0)$}
+\item{Since the pdf of $P(f_i^s) \geq 0)$ does not have an analytical form ,it is not possible to get the probability of $f_i^s$ for a particular value of $s$}
+\item{Hence we can only bound $P(f_i^s) \geq 0)$ by a lower bound and this can be done by Cantelli's inequality.}
+
+\end{itemize}
+\end{block}
+\end{frame}
+\end{block}
+\end{frame}
+begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Lower bound on $P(f_i^s) \geq 0)$}
+
+\begin{itemize}
+\item{The lower bound are thus obtained through}
+$$ $$
+\item{Thus solving for larger $k$ increases the lower bounds and thus improves the confidence measures}
+\end{itemize}
 \end{block}
 \end{frame}
 \section*{Summary}
