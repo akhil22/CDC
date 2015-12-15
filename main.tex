@@ -509,27 +509,146 @@ This can be suitably achieved by suitably changing the value of $k$
 \end{figure}
 \end{block}
 \end{frame}
-begin{frame}{Proactive collision avoidance in intent space}
+\begin{frame}{Proactive collision avoidance in intent space}
 \begin{block}{Lower bound on $P(f_i^s) \geq 0)$}
 
 \begin{itemize}
-\item{In the previous section we found out on how to obtain scale $s$ for various values of $k$ that would end up maximizing  $P(f_i^s) \geq 0)$}
-\item{Since the pdf of $P(f_i^s) \geq 0)$ does not have an analytical form ,it is not possible to get the probability of $f_i^s$ for a particular value of $s$}
-\item{Hence we can only bound $P(f_i^s) \geq 0)$ by a lower bound and this can be done by Cantelli's inequality.}
+\item{In the previous section we found out on how to obtain scale $s$ for various values of $k$ that would end up maximizing  $P(f_i^s) \geq 0$.}
+\item{Since the pdf of $P(f_i^s) \geq 0$ does not have an analytical form ,it is not possible to get the probability of $f_i^s$ for a particular value of $s$.}
+\item{Hence we can only bound $P(f_i^s) \geq 0$ by a lower bound and this can be done by Cantelli's inequality.}
 
 \end{itemize}
 \end{block}
 \end{frame}
-\end{block}
-\end{frame}
-begin{frame}{Proactive collision avoidance in intent space}
+\begin{frame}{Proactive collision avoidance in intent space}
 \begin{block}{Lower bound on $P(f_i^s) \geq 0)$}
 
 \begin{itemize}
 \item{The lower bound are thus obtained through}
-$$ $$
+$$P(f_i^s \geq 0 | \mu_{f_i^s} - k * \sigma_{f_i^s} > 0) \geq \frac{k^2}{k^2+1} $$
 \item{Thus solving for larger $k$ increases the lower bounds and thus improves the confidence measures}
 \end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Collision Avoidance in Multiple Intent space }
+\begin{itemize}
+\item{As stated earlier, the objective is to 
+Find maneuvers that maximize the confidence of 
+safety for more probable intents.}
+\item{As seen in formulation one, the expression on the
+Lower bound of confidence is.}
+$$P(f_i^s \geq 0 | \mu_{f_i^s} - k * \sigma_{f_i^s} > 0) \geq \frac{k^2}{k^2+1} $$
+\item{Hence confidence of safety is directly related to variable $k$}
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Collision Avoidance in Multiple Intent space }
+\begin{figure}
+\includegraphics[width= 8.1cm, height=6.5cm]{fig11.eps}
+\end{figure}
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Cost function for Collision Avoidance in Multiple Intent space }
+\begin{itemize}
+\item{Optimization Formulation}
+\begin{equation*}
+\begin{aligned}
+& {\text{minimize}}
+& & w_t\Delta t + w_r\Delta r \\
+& \text{subject to}
+& & \mu_{f_i^s} \pm k_i*\sigma_{f_i^s} \geq 0, \; i = 1, \ldots, n,\;. \\
+%& & \Delta t = (s-1)^2 \\
+%& & \Delta r = -\sum_i^{n}\gamma_{i}*k_i
+\end{aligned}
+\end{equation*}
+%\begin{itemize}
+%\end{itemize}
+
+\item{Where $\Delta t = (s-1)^2$ and $\Delta r = -\sum_i^{n}\gamma_{i}*k_i$}
+
+\item{Here $\mu_{f_i^s}$ and $\sigma_{f_i^s}$ are the mean and the standard deviation of the collision cone respectively.}
+\item{$k$ is the variable directly relating to the confidence of safety as described in Cantelli's inequality.} 
+\item{$\gamma_i$ is the probability of intent $i$}
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Cost function for Collision Avoidance in Multiple Intent space}
+\begin{itemize}
+\item{$\Delta t$ ensures a collision free velocity very close to the current velocity.}
+\item{$\Delta r$ relates the risk associated with the avoidance maneuver.}
+\item{This biases the solution space towards avoiding the most likely intent with higher confidence.}
+\end{itemize}
+
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Illustration}
+\begin{itemize}
+\item{Consider the Scenario shown in the following figure}
+\begin{figure}
+\includegraphics[width= 4.1cm, height=4.1cm]{fig11.eps}
+\end{figure}
+
+\end{itemize}
+
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Illustration, Scale along the current robot path}
+\begin{itemize}
+\item{The cost function and the constraint for the above scenario is shown in the following figure}
+\begin{figure}
+\includegraphics[width= 4.1cm, height=4.1cm]{fig12.eps}
+\end{figure}
+\end{itemize}
+
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Illustration, Scale along the current robot path}
+\begin{itemize}
+\item{It can be noticed from the above figure, that the values of scale $s$, $k_1$, $k_2$,$k_3$, at which the cost function has an optimal value are $s=0.6$, $k_1=0.9$,$k_2=1.6$,$k_3=2$}
+\begin{figure}
+\includegraphics[width= 4.1cm, height=3.8cm]{fig12.eps}
+\end{figure}
+\item{From the values of $k_1,k_2,k_3$, we can say that the scale $s =0.6$ corresponds to 75\% of safety/confidence for intent two (most probable) and 30\% confidence / safety for intent one}
+\end{itemize}
+
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Illustration, for multiple candidate trajectories}
+\begin{itemize}
+\item{In some cases, it may become imperative to deviate from the current path to avoid collisions.}
+\begin{figure}
+\includegraphics[width= 4.1cm, height=3.8cm]{fig13.eps}
+\end{figure}
+\item{For example in the figure, and in the table below, it is concluded that there is no solution (scale:$s$) possible along the robot’s current path(red).}
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Illustration, for multiple candidate trajectories}
+
+\begin{center}
+\begin{tabular} { |c|c|c|c|c| }
+ \hline
+ Candidate Trajectory & $k_1$ & $k_2$ & $k_3$ & scale \\
+\hline
+ Robot Original  & NULL  & NULL & NULL & NULL  \\
+\hline
+Candidate 1 & 0.2 & 2 & 2 & 0.6 \\
+\hline
+Candidate 2 & 0.67 & 2 & 2 & 0.916 \\
+\hline
+Candidate 3 & 1.73 & 2 & 2 & 1\\
+\hline
+\end{tabular}
+\end{center}
 \end{block}
 \end{frame}
 \section*{Summary}

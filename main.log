@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2014.5.20)  15 DEC 2015 22:20
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2014.5.20)  16 DEC 2015 00:42
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -1051,17 +1051,55 @@ File: coll_cone_distribution.eps Graphic file (type eps)
 
 ] [25
 
+] [26
+
+] [27
+
+]
+File: fig11.eps Graphic file (type eps)
+ <fig11.eps> [28
+
+]
+[29
+
+] [30
+
+]
+File: fig11.eps Graphic file (type eps)
+ <fig11.eps> [31
+
+]
+File: fig12.eps Graphic file (type eps)
+ <fig12.eps> [32
+
+]
+File: fig12.eps Graphic file (type eps)
+ <fig12.eps> [33
+
+]
+File: fig13.eps Graphic file (type eps)
+ <fig13.eps>
+Missing character: There is no â in font cmss10!
+Missing character: There is no € in font cmss10!
+Missing character: There is no ™ in font cmss10!
+
+[34
+
+] [35
+
+] [36
+
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 540.
+(hyperref)                removing `\translate ' on input line 682.
 
 File: beamericonarticle.eps Graphic file (type eps)
 <beamericonarticle.eps>
 File: beamericonbook.eps Graphic file (type eps)
  <beamericonbook.eps>
 File: beamericonarticle.eps Graphic file (type eps)
- <beamericonarticle.eps> [26
+ <beamericonarticle.eps> [37
 
 ]
 \tf@nav=\write6
@@ -1084,12 +1122,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16671 strings out of 495062
- 300794 string characters out of 1182644
- 396565 words of memory out of 3000000
- 19389 multiletter control sequences out of 15000+50000
- 17335 words of font info for 59 fonts, out of 3000000 for 9000
+ 16712 strings out of 495062
+ 301301 string characters out of 1182644
+ 397091 words of memory out of 3000000
+ 19425 multiletter control sequences out of 15000+50000
+ 19235 words of font info for 66 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 49i,14n,53p,450b,601s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,14n,53p,450b,664s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.dvi (26 pages, 267476 bytes).
+Output written on main.dvi (37 pages, 372880 bytes).
