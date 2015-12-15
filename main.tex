@@ -353,6 +353,71 @@ $$
 \section{Proactive collision avoidance in intent space}
 \subsection{}
 \begin{frame}{Proactive collision avoidance in intent space}
+\begin{itemize}
+\item{To propose an optimization framework,
+That achieves an elegant balance between minimizing risk and ease of collision avoidance maneuver.}
+\item{Ease of Collision avoidance maneuver directly relates to factors like deviation from current path and acceleration and deceleration capabilities of robot.}
+\item{Minimizing risk boils down to biasing the maneuver towards avoiding the most likely intent with higher confidence.}
+\end{itemize}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{figure}
+\centering
+\includegraphics[width= 8.1cm, height=6.5cm]{full_plot.eps}
+\end{figure}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Formulation steps}
+\begin{itemize}
+\item{Formulation for finding a relation between a particular collision avoidance maneuver and its confidence of safety, for a particular obstacle/intent.}
+\end{itemize}
+\begin{figure}
+\centering
+\includegraphics[width= 6.1cm, height=3.5cm]{fig1.eps}
+\end{figure}
+%You can also highlight sections of your presentation in a block, with it's own title
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Formulation steps}
+\begin{itemize}
+\item{Formulation extending it to multiple                            intent space}
+\end{itemize}
+\begin{figure}
+\centering
+\includegraphics[width= 6.1cm, height=3.5cm]{fig2.eps}
+\end{figure}
+%You can also highlight sections of your presentation in a block, with it's own title
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Explanation of Formulation one}
+\begin{itemize}
+\item{Finding a relation between a particular collision avoidance maneuver and its confidence of safety, for a particular obstacle/intent [1]}
+
+
+\end{itemize}
+[1]: Bharath Gopalakrishnan*, Arun Kumar Singh*, K.Madhava Krishna, Closed form characterization of Collison free velocities and confidence boinds for Non- holonomic robots in uncertain dynamic environments- To appear in IEEE Proc of IROS 2015
+
+%You can also highlight sections of your presentation in a block, with it's own title
+\end{block}
+\end{frame}
+\begin{frame}{Proactive collision avoidance in intent space}
+\begin{block}{Recap of time scaled collision cone:}
+\begin{itemize}
+\item{Time scaled collision cone constraint takes the following from}
+$$f_i^s \geq 0 $$
+\item{where $f_i^s$ is given by}
+\begin{eqnarray}\label{collcone}
+ f_i= (x^{t_c}-x_i^{t_c})^2+(y^{t_c}-y_i^{t_c})^2- R^2\\ \nonumber- \frac{(s\dot{x}^{t_c}-\dot{x}_i^{t_c})(x^{t_c}-x_i^{t_c})+(s\dot{y}^{t_c}-\dot{y}_i^{t_c})(y^{t_c}-y_i^{t_c})^2}{(s\dot{x}^{t_c}-\dot{x}_i^{t_c})^2+(s\dot{y}^{t_c}-\dot{y}_i^{t_c})^2} \\\nonumber, \forall i = {1,2...n}
+\end{eqnarray}
+\end{itemize}
+\begin{figure}
+\centering
+\includegraphics[width= 6.1cm, height=3.5cm]{fig2.eps}
+\end{figure}
+%You can also highlight sections of your presentation in a block, with it's own title
+\end{block}
 \end{frame}
 \section*{Summary}
 
