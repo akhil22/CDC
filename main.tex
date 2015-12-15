@@ -134,13 +134,13 @@
 \begin{frame}{Motivation}
   \begin{itemize}
   \item {
-   Robots and humans are beginning to occupy the same work spaces
+   Robots and humans are beginning to occupy the same work spaces.
   }
   \item {
-   Account for human intent in robot's navigation and avoidance Maneuver
+   Account for human intent in robot's navigation and avoidance Maneuver.
   }
   \item {
-    Uncertain and Haphazard local movements of human 
+    Uncertain and Haphazard local movements of human.
   }
   \end{itemize}
 \end{frame}
@@ -190,10 +190,10 @@
 %Here is an example of an example block.
 %\end{example}
 \begin{itemize}
-\item{Characterize intents as the final destinations a person might reach}
-\item{Let $D = \{\mathbf{d^1,d^2,...,d^m}\}$ be the set of final destinations a person can go to in a given environment}
-\item{compute the probability of each of these intents Using Hidden Markov Model.}
-\item{Characterize local Haphazard movements as a gaussian $\mathcal{N}(\mu_i(\mathbf{x}^{t}),\sigma_t)$ }
+\item{Characterize intents as the final destinations a person might reach.}
+\item{Let $D = \{\mathbf{d^1,d^2,...,d^m}\}$ be the set of final destinations a person can go to in a given environment.}
+\item{Compute the probability of each of these intents Using Hidden Markov Model.}
+\item{Characterize local Haphazard movements as a gaussian $\mathcal{N}(\mu_i(\mathbf{x}^{t}),\sigma_t)$. }
 \end{itemize}
 \end{frame}
 \begin{frame}{Human Intention prediction}
@@ -206,14 +206,14 @@
 \begin{itemize}
 \item{ Let $S^t \in D$ represent the intent of a person to reach destination $S^t$ at time $t$.}
 \item{$D$ represents set of states in HMM.}
-\item{Human trajectories are represented as $X(T) = \{\mathbf{x^1,x^2,...,x^T}\}$}
+\item{Human trajectories are represented as $X(T) = \{\mathbf{x^1,x^2,...,x^T}\}$.}
 \end{itemize}
 
 \end{frame}
 \begin{frame}{HMM for Intention prediction}
 \begin{itemize}
-\item{  $O^t$ is the angle defined by the first derivative of the trajectory at point $\mathbf{x^t}$}
-\item{Given the current position and orientation we compute the probability of reaching each of the destination $d^i \in D$}
+\item{  $O^t$ is the angle defined by the first derivative of the trajectory at point $\mathbf{x^t}$.}
+\item{Given the current position and orientation we compute the probability of reaching each of the destination $d^i \in D$.}
 
 \end{itemize}
 \begin{figure}[thpb]
@@ -264,15 +264,15 @@
 %\psline[linewidth=0.016cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(3.54,1.795)(3.74,3.415)
 \end{pspicture} 
 }
-\caption{figure shows the heading angle $O^t$, $\mu_{ij}(t)$ and $\mu_{i}(t)$ at time $t$}
+\caption{figure shows the heading angle $O^t$, $\mu_{ij}(t)$ and $\mu_{i}(t)$ at time $t$.}
 \label{notation}
 \end{figure}
 \end{frame}
 \begin{frame}{HMM for Intention prediction}
 \begin{itemize}
-\item{  $\mu_i(t)$ is the measure relative to the destination $\mathbf{d^i}$}
-\item{$O^t$ is the global measure of the target orientation}
-\item{$\theta_{ij}(t)$ is the measure between final destinations $\mathbf{d^i}$ and $\mathbf{d^j}$ relative to the current position $\mathbf{x^t}$}
+\item{  $\mu_i(t)$ is the measure relative to the destination $\mathbf{d^i}$.}
+\item{$O^t$ is the global measure of the target orientation.}
+\item{$\theta_{ij}(t)$ is the measure between final destinations $\mathbf{d^i}$ and $\mathbf{d^j}$ relative to the current position $\mathbf{x^t}$.}
 \end{itemize}
 \begin{figure}[thpb]
  \scalebox{1} % Change this value to rescale the drawing.
@@ -322,7 +322,7 @@
 %\psline[linewidth=0.016cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(3.54,1.795)(3.74,3.415)
 \end{pspicture} 
 }
-\caption{figure shows the heading angle $O^t$, $\mu_{ij}(t)$ and $\mu_{i}(t)$ at time $t$}
+\caption{figure shows the heading angle $O^t$, $\mu_{ij}(t)$ and $\mu_{i}(t)$ at time $t$.}
 \label{notation}
 \end{figure}
 \end{frame}
@@ -344,7 +344,7 @@ $$
 \begin{itemize}
 \item{Let $O^{1:T}$ = $\{O^1,O^1,...,O^T\}$ is the set of measurements obtained till time $T$.}
 \item{Our task is to calculate $p(S^t = \mathbf{d^i} | O^{1:T} 
-,\lambda)$}
+,\lambda)$.}
 
 \item{ In HMM this term is usually referred to as $\gamma_t(i)$ To find this we use standard forward and backward algorithms.}
 \end{itemize}
@@ -383,7 +383,7 @@ That achieves an elegant balance between minimizing risk and ease of collision a
 \begin{frame}{Proactive collision avoidance in intent space}
 \begin{block}{Formulation steps}
 \begin{itemize}
-\item{Formulation extending it to multiple                            intent space}
+\item{Formulation extending it to multiple intent space}
 \end{itemize}
 \begin{figure}
 \centering
@@ -395,11 +395,11 @@ That achieves an elegant balance between minimizing risk and ease of collision a
 \begin{frame}{Proactive collision avoidance in intent space}
 \begin{block}{Explanation of Formulation one}
 \begin{itemize}
-\item{Finding a relation between a particular collision avoidance maneuver and its confidence of safety, for a particular obstacle/intent [1]}
+\item{Finding a relation between a particular collision avoidance maneuver and its confidence of safety, for a particular obstacle/intent [1].}
 
 
 \end{itemize}
-[1]: Bharath Gopalakrishnan*, Arun Kumar Singh*, K.Madhava Krishna, Closed form characterization of Collison free velocities and confidence boinds for Non- holonomic robots in uncertain dynamic environments- To appear in IEEE Proc of IROS 2015
+[1]: Bharath Gopalakrishnan*, Arun Kumar Singh*, K.Madhava Krishna, Closed form characterization of Collison free velocities and confidence boinds for Non- holonomic robots in uncertain dynamic environments- To appear in IEEE Proc of IROS 2015.
 
 %You can also highlight sections of your presentation in a block, with it's own title
 \end{block}
@@ -407,7 +407,7 @@ That achieves an elegant balance between minimizing risk and ease of collision a
 \begin{frame}{Proactive collision avoidance in intent space}
 \begin{block}{Recap of time scaled collision cone:}
 \begin{itemize}
-\item{Time scaled collision cone constraint takes the following from}
+\item{Time scaled collision cone constraint takes the following from.}
 $$f_i^s \geq 0 $$
 \item{where $f_i^s$ is given by}
 \begin{eqnarray}\label{collcone}
@@ -435,7 +435,7 @@ $$a_is^2+b_is+c_i \geq 0 $$
 \begin{itemize}
 
 
-\item{if at time $t=t_c$ the obstacles state are given by }
+\item{If at time $t=t_c$ the obstacles state are given by }
 $$x_i^{t_c} = \mathcal{N}(\mu_i^{x},\sigma_i^{x}), \dot{x}_i^{t_c} = \mathcal{N}(\mu_i^{\dot{x}},\sigma_i^{\dot{x}})$$
 $$y_i^{t_c} = \mathcal{N}(\mu_i^{y},\sigma_i^{y}), \dot{y}_i^{t_c} = \mathcal{N}(\mu_i^{\dot{y}},\sigma_i^{\dot{y}})$$
 %You can also highlight sections of your presentation in a block, with it's own title
@@ -475,11 +475,11 @@ $$\underset{s}{\operatorname{argmax}}\{P(f_i^s \geq 0)\}$$
 \begin{itemize}
 
 
-\item{Though the pdf of $f_i^s is$ does not have an analytical expression we can get its mean and standard deviation in closed form as a function of $s$}
-\item{By the law of unconscious statistician}
+\item{Though the pdf of $f_i^s is$ does not have an analytical expression we can get its mean and standard deviation in closed form as a function of $s$.}
+\item{By the law of unconscious statistician.}
 $$E[f_i^s]=\mu_{f_i^s}=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
 \int_{-\infty}^{\infty}f_i^s(.)P_i(.)dx_i^{t_c}dy_i{t_c}d\dot{x_i}^{t_c}d\dot{y_i}^{t_c}$$
-\item{Which evaluates as}
+\item{Which evaluates as.}
 $$\mu_{f_i^2} = A_is^2+B_is+C_i$$
 Where $A_i,B_i$ and $C_i$ are the function of robot states and obstacle distribution parameters , $\mu_i^1,\mu_i^2,\sigma_i^1,\sigma_i^2$
  \end{itemize} 
@@ -504,7 +504,7 @@ Where $D_i,E_i,F_i,G_i$, and $H_i$ are the function of robot states and obstacle
 \begin{block}{Solution}
 
 $$\underset{s}{\operatorname{argmax}}\{P(f_i^s \geq 0)\} \Longrightarrow \mu_{f_i^s} \pm k * \sigma_{f_i^s} $$ 
-This can be suitably achieved by suitably changing the value of $k$
+This can be suitably achieved by changing the value of $k$
 %You can also highlight sections of your presentation in a block, with it's own title
 \begin{figure}
 \includegraphics[width= 8.1cm, height=4.5cm]{coll_cone_distribution.eps}
@@ -528,7 +528,7 @@ This can be suitably achieved by suitably changing the value of $k$
 \begin{itemize}
 \item{The lower bound are thus obtained through}
 $$P(f_i^s \geq 0 | \mu_{f_i^s} - k * \sigma_{f_i^s} > 0) \geq \frac{k^2}{k^2+1} $$
-\item{Thus solving for larger $k$ increases the lower bounds and thus improves the confidence measures}
+\item{Thus solving for larger $k$ increases the lower bounds and thus improves the confidence measures.}
 \end{itemize}
 \end{block}
 \end{frame}
@@ -602,7 +602,7 @@ $$P(f_i^s \geq 0 | \mu_{f_i^s} - k * \sigma_{f_i^s} > 0) \geq \frac{k^2}{k^2+1} 
 \begin{frame}{Proactive collision avoidance in intent space}
 \begin{block}{Illustration, Scale along the current robot path}
 \begin{itemize}
-\item{The cost function and the constraint for the above scenario is shown in the following figure}
+\item{The cost function and the constraint for the above scenario is shown in the following figure.}
 \begin{figure}
 \includegraphics[width= 4.1cm, height=4.1cm]{fig12.eps}
 \end{figure}
@@ -613,11 +613,11 @@ $$P(f_i^s \geq 0 | \mu_{f_i^s} - k * \sigma_{f_i^s} > 0) \geq \frac{k^2}{k^2+1} 
 \begin{frame}{Proactive collision avoidance in intent space}
 \begin{block}{Illustration, Scale along the current robot path}
 \begin{itemize}
-\item{It can be noticed from the above figure, that the values of scale $s$, $k_1$, $k_2$,$k_3$, at which the cost function has an optimal value are $s=0.6$, $k_1=0.9$,$k_2=1.6$,$k_3=2$}
+\item{It can be noticed from the above figure, that the values of scale $s$, $k_1$, $k_2$,$k_3$, at which the cost function has an optimal value are $s=0.6$, $k_1=0.9$,$k_2=1.6$,$k_3=2$.}
 \begin{figure}
 \includegraphics[width= 4.1cm, height=3.8cm]{fig12.eps}
 \end{figure}
-\item{From the values of $k_1,k_2,k_3$, we can say that the scale $s =0.6$ corresponds to 75\% of safety/confidence for intent two (most probable) and 30\% confidence / safety for intent one}
+\item{From the values of $k_1,k_2,k_3$, we can say that the scale $s =0.6$ corresponds to 75\% of safety/confidence for intent two (most probable) and 30\% confidence / safety for intent one.}
 \end{itemize}
 
 \end{block}
@@ -652,7 +652,7 @@ Candidate 3 & 1.73 & 2 & 2 & 1\\
 \end{tabular}
 \end{center}
 \begin{itemize}
-\item{From the above table it is clear that Candidate Trajectory 2 can be preferred }
+\item{From the above table it is clear that Candidate Trajectory 2 can be preferred .}
 \end{itemize}
 \end{block}
 \end{frame}
