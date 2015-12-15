@@ -81,24 +81,8 @@
 \headcommand {\beamer@framepages {34}{34}}
 \headcommand {\slideentry {3}{1}{24}{35/35}{}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\sectionentry {4}{Summary}{36}{Summary}{0}}
-\headcommand {\beamer@sectionpages {12}{35}}
+\headcommand {\beamer@partpages {1}{35}}
 \headcommand {\beamer@subsectionpages {12}{35}}
-\headcommand {\slideentry {4}{0}{25}{36/36}{}{0}}
-\headcommand {\beamer@framepages {36}{36}}
-\headcommand {\partentry {\translate {Appendix}}{1}}
-\headcommand {\beamer@partpages {1}{36}}
-\headcommand {\beamer@sectionpages {36}{36}}
-\headcommand {\beamer@subsectionpages {36}{36}}
-\headcommand {\beamer@appendixpages {37}}
-\headcommand {\sectionentry {5}{\translate {Appendix}}{37}{\translate {Appendix}}{1}}
-\headcommand {\beamer@sectionpages {37}{36}}
-\headcommand {\beamer@subsectionpages {37}{36}}
-\headcommand {\beamer@subsectionentry {1}{5}{1}{37}{For Further Reading}}\headcommand {\beamer@subsectionpages {37}{36}}
-\headcommand {\slideentry {5}{1}{1}{37/37}{For Further Reading}{1}}
-\headcommand {\beamer@framepages {37}{37}}
-\headcommand {\beamer@partpages {37}{37}}
-\headcommand {\beamer@subsectionpages {37}{37}}
-\headcommand {\beamer@sectionpages {37}{37}}
-\headcommand {\beamer@documentpages {37}}
-\headcommand {\def \inserttotalframenumber {37}}
+\headcommand {\beamer@sectionpages {12}{35}}
+\headcommand {\beamer@documentpages {35}}
+\headcommand {\def \inserttotalframenumber {35}}
