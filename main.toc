@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {1}{Motivation}{3}{0}{1}
+\beamer@sectionintoc {2}{Human Intention prediction}{4}{0}{2}
+\beamer@sectionintoc {3}{collision avoidance}{6}{0}{3}
